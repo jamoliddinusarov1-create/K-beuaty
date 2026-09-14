@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Chiqish{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card p-4 text-center">
+            <h2 class="mb-4">Chiqishni tasdiqlaysizmi?</h2>
+            <form method="POST" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-dark w-100">Ha, chiqish</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

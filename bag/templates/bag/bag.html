@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Savat{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Savatingiz</h1>
+
+{% if bag_items %}
+    {% for item in bag_items %}
+    <div class="row border-bottom py-3 align-items-center">
+        <div class="col-md-2">
+            {% if item.product.image %}
+                <img src="{{ item.product.image.url }}" class="img-fluid rounded">
+            {% endif %}
+        </div>
+        <div class="col-md-4">
+            <h5>{{ item.product.name }}</h5>
+        </div>
+        <div class="col-md-2">{{ item.product.price }} so'm</div>
+        <div class="col-md-2">Soni: {{ item.quantity }}</div>
+        <div class="col-md-2">
+            <form method="POST" action="{% url 'remove_from_bag' item.product.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-sm btn-outline-danger">O'chirish</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+    <h3 class="mt-4">Umumiy summa: {{ total }} so'm</h3>
+    <a href="{% url 'checkout' %}" class="btn btn-dark mt-2">Buyurtmani rasmiylashtirish</a>
+{% else %}
+    <p>Savatingiz bo'sh</p>
+    <a href="{% url 'products' %}" class="btn btn-dark">Xarid qilishni boshlash</a>
+{% endif %}
+{% endblock %}

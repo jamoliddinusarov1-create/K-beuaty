@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Buyurtma qabul qilindi{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="text-success">Rahmat, {{ order.full_name }}!</h1>
+    <p class="fs-5">Buyurtma raqami: #{{ order.id }}</p>
+    <p class="fs-5">Summa: {{ order.amount }} so'm</p>
+    <p>Holati: {{ order.get_status_display }}</p>
+    <a href="{% url 'products' %}" class="btn btn-dark mt-3">Xaridni davom ettirish</a>
+</div>
+{% endblock %}

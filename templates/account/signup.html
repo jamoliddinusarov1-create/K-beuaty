@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Ro'yxatdan o'tish{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card p-4">
+            <h2 class="mb-4 text-center">Ro'yxatdan o'tish</h2>
+            <form method="POST" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-dark w-100 mt-2">Ro'yxatdan o'tish</button>
+            </form>
+            <p class="text-center mt-3 small">
+                Hisobingiz bormi? <a href="{% url 'account_login' %}">Kiring</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Manrope:wght@400;500;700&display=swap');
+
+:root {
+    --bs-dark: #E84C7D;
+    --bs-dark-rgb: 232, 76, 125;
+    --bs-primary: #E84C7D;
+    --bs-primary-rgb: 232, 76, 125;
+    --bs-body-bg: #FFF3F6;
+    --bs-body-color: #3D2B32;
+    --pink-soft: #FFE1E9;
+    --pink-deep: #E84C7D;
+    --line: #FFD3DE;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #FFF3F6;
+    color: #3D2B32;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #3D2B32;
+}
+
+.navbar {
+    background-color: #FFFFFF !important;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 12px rgba(232, 76, 125, 0.08);
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    color: #E84C7D !important;
+}
+
+.navbar .nav-link {
+    color: #3D2B32 !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: #E84C7D !important;
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 14px rgba(232, 76, 125, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(232, 76, 125, 0.18);
+}
+
+.card-img-top {
+    border-radius: 0;
+}
+
+.card-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+}
+
+.card-text {
+    color: #E84C7D;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn-dark {
+    background-color: #E84C7D;
+    border-color: #E84C7D;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.btn-dark:hover {
+    background-color: #D63868;
+    border-color: #D63868;
+}
+
+.btn-outline-dark {
+    color: #E84C7D;
+    border-color: #E84C7D;
+    border-radius: 30px;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.btn-outline-dark:hover {
+    background-color: #FFE1E9;
+    border-color: #E84C7D;
+    color: #E84C7D;
+}
+
+.alert-info {
+    background-color: #FFE1E9;
+    border: none;
+    border-radius: 12px;
+    color: #C22C5D;
+}
+
+a {
+    color: #E84C7D;
+}
+
+a:hover {
+    color: #D63868;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin-top: 4px;
+    font-family: 'Manrope', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #E84C7D;
+    box-shadow: 0 0 0 3px rgba(232, 76, 125, 0.15);
+}
+
+form p {
+    margin-bottom: 16px;
+}
+
+form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #3D2B32;
+    display: block;
+}
