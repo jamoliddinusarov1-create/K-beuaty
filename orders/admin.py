@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 from .models import Order
 
-
+# admin registration for the Order model with custom display and filtering options
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'full_name', 'phone_number', 'amount', 'status_colored', 'created_at')
