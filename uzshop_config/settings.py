@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Qo'shimchlar ham bor
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
