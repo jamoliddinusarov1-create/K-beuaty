@@ -192,3 +192,4 @@ JAZZMIN_SETTINGS = {
     "copyright": "UzShop",
     "show_ui_builder": True,
 }
+# jazmin ulangan va saytni ishlatib ko'rishingiz mumkin
